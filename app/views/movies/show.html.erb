@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie.title %>
+  <%= @movie.genre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= image_tag(@movie.pictures.first.url) if @movie.pictures.count > 0 %>
+</p>
+
+<p>
+  <strong>Subscription:</strong>
+  <%= @movie.subscription_id %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Back', movies_path %>
